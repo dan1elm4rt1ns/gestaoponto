@@ -1,37 +1,50 @@
-import React, { useState, useEffect } from 'react';
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { getDashboardData } from '../services/dashboardService';
+// Login.jsx
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import api from '../services/api';
 
-function Dashboard() {
-  const [data, setData] = useState([]);
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const result = await getDashboardData();
-        // Transforme os dados conforme necessário. Exemplo:
-        setData([{ label: 'Pontos de Hoje', value: Number(result.totalPontosHoje) }]);
-      } catch (error) {
-        console.error('Erro ao buscar dados do dashboard', error);
-      }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.post('/login', { email, password });
+      localStorage.setItem('token', response.data.token);
+      navigate('/dashboard');
+    } catch (err) {
+      setError('Credenciais inválidas');
     }
-    fetchData();
-  }, []);
+  };
 
   return (
-    <div className="p-8">
-      <h2 className="text-3xl font-bold mb-4">Dashboard</h2>
-      <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={data}>
-          <CartesianGrid stroke="#ccc" />
-          <XAxis dataKey="label" />
-          <YAxis />
-          <Tooltip />
-          <Bar dataKey="value" fill="#8884d8" />
-        </BarChart>
-      </ResponsiveContainer>
+    <div>
+      <h2>Tela de Login</h2>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <br />
+        <button type="submit">Entrar</button>
+      </form>
     </div>
   );
 }
 
-export default Dashboard;
+export default Login;
