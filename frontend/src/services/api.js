@@ -5,7 +5,7 @@ const API = axios.create({
 });
 
 // Intercepta as requisições para adicionar o token de autenticação
-api.interceptors.request.use((config) => {
+API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
@@ -13,4 +13,4 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export default api;
+export default API;

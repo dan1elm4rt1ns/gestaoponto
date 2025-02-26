@@ -60,3 +60,110 @@ Usuário administrador criado: {
 Servidor rodando em http://localhost:3000
 Tabelas verificadas/criadas com sucesso!
 Usuário administrador já existe.
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+Tabelas verificadas/criadas com sucesso!
+Usuário administrador já existe.
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+Tabelas verificadas/criadas com sucesso!
+Usuário administrador já existe.
+
+> backend@1.0.0 start
+> node server.js
+
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (/home/djdalg/gestao-ponto-github/gestaoponto/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/djdalg/gestao-ponto-github/gestaoponto/backend/server.js:35:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Module._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1943:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.11.0
+
+> backend@1.0.0 start
+> node server.js
+
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1907:16)
+    at listenInCluster (node:net:1964:12)
+    at Server.listen (node:net:2066:7)
+    at Function.listen (/home/djdalg/gestao-ponto-github/gestaoponto/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/djdalg/gestao-ponto-github/gestaoponto/backend/server.js:35:5)
+    at Module._compile (node:internal/modules/cjs/loader:1546:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1689:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Module._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1943:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.11.0
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+Tabelas verificadas/criadas com sucesso!
+Usuário administrador já existe.
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+Tabelas verificadas/criadas com sucesso!
+Usuário administrador criado: {
+  id: 6,
+  name: 'Admin',
+  email: 'admin@example.com',
+  password: '$2b$10$VI8W.sk6peQbeNEDjxBxG.r/HawBQUoOB9oWHB6DUN3hBK7uiUvrS',
+  created_at: 2025-02-26T12:25:01.885Z
+}
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+Tabelas verificadas/criadas com sucesso!
+Usuário administrador criado: {
+  id: 7,
+  name: 'Admin',
+  email: 'admin@example.com',
+  password: '$2b$10$Rb6ZoGULEwOdIxZHP/rj7.ZpHLRzFoah6UMSZ5ScUOpZHAD54Mwe2',
+  created_at: 2025-02-26T12:32:49.970Z
+}

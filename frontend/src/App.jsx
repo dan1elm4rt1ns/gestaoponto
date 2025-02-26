@@ -6,8 +6,6 @@ import Dashboard from './pages/Dashboard';
 import Registro from './pages/Registro';
 import Correcao from './pages/Correcao';
 
-localStorage.clear();
-
 function App() {
   const isAuthenticated = !!localStorage.getItem('token');
 
