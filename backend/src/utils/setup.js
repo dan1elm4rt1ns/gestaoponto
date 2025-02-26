@@ -1,14 +1,12 @@
 const pool = require('./db');
-const bcrypt = require('bcrypt');
-const User = require('../models/User');  // Assumindo que você tem um modelo User
 const dotenv = require('dotenv');
+const User = require('../models/User');
 
-dotenv.config();  // Carregar variáveis de ambiente do .env
+dotenv.config();
 
 // Função para criar as tabelas caso não existam
 async function createTables() {
   try {
-    // Tabela de usuários
     await pool.query(`
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
@@ -19,7 +17,6 @@ async function createTables() {
       );
     `);
 
-    // Tabela de pontos
     await pool.query(`
       CREATE TABLE IF NOT EXISTS pontos (
         id SERIAL PRIMARY KEY,
@@ -39,18 +36,16 @@ async function createTables() {
 // Função para criar um usuário administrador caso não exista
 async function createAdminUserIfNotExists() {
   try {
-    const email = "admin@example.com"; // Email do admin
-    const password = "adm1npwd"; // Senha do admin
-    const existingUser = await User.findByEmail(email);  // Verificando se o admin já existe
+    const email = "admin@example.com";
+    const password = "adm1npwd";
+    const existingUser = await User.findByEmail(email);
 
     if (!existingUser) {
-      const hashedPassword = await bcrypt.hash(password, 10);  // Criptografando a senha
       const newUser = await User.create({
         name: "Admin",
         email,
-        password: hashedPassword
+        password
       });
-
       console.log("Usuário administrador criado:", newUser);
     } else {
       console.log("Usuário administrador já existe.");
@@ -67,4 +62,3 @@ async function setup() {
 }
 
 module.exports = setup;
-

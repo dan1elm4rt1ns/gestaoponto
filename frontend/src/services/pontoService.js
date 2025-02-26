@@ -1,19 +1,35 @@
-import API from './api';
+import axios from 'axios';
 
-export const registerPonto = async (type, timestamp) => {
+const API_URL = 'http://localhost:3000'; // URL do backend
+
+// Função para registrar um ponto
+export async function registerPonto(type, timestamp) {
   try {
-    const response = await API.post('/ponto', { type, timestamp });
+    const response = await axios.post(
+      `${API_URL}/ponto`,
+      { type, timestamp },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      }
+    );
     return response.data;
   } catch (error) {
     throw error;
   }
-};
+}
 
-export const getPontos = async () => {
+// Função para buscar os pontos (exportada para uso em outras telas)
+export async function getPontos() {
   try {
-    const response = await API.get('/ponto');
+    const response = await axios.get(`${API_URL}/ponto`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+    });
     return response.data;
   } catch (error) {
     throw error;
   }
-};
+}

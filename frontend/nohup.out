@@ -50,3 +50,151 @@
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+sh: line 1: vite: command not found
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+
+  VITE v6.2.0  ready in 211 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+failed to load config from /home/djdalg/gestao-ponto-github/gestaoponto/frontend/vite.config.js
+error when starting dev server:
+Error: EACCES: permission denied, open '/home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/.vite-temp/vite.config.js.timestamp-1740574892745-83a71cfc8939b.mjs'
+    at async open (node:internal/fs/promises:638:25)
+    at async Object.writeFile (node:internal/fs/promises:1208:14)
+    at async loadConfigFromBundledFile (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:54610:5)
+    at async bundleAndLoadConfigFile (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:54455:22)
+    at async loadConfigFromFile (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:54417:44)
+    at async resolveConfig (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:53925:24)
+    at async _createServer (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:43841:18)
+    at async CAC.<anonymous> (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/cli.js:750:20)
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+
+  VITE v6.2.0  ready in 193 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+10:06:21 AM [vite] (client) hmr update /src/pages/Login.jsx
+10:19:51 AM [vite] (client) hmr update /src/pages/Login.jsx
+10:20:18 AM [vite] (client) hmr update /src/pages/Login.jsx
+10:20:19 AM [vite] Internal server error: Failed to resolve import "../services/dashboardService" from "src/pages/Login.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/djdalg/gestao-ponto-github/gestaoponto/frontend/src/pages/Login.jsx:3:33
+  18 |  import React, { useState, useEffect } from "react";
+  19 |  import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+  20 |  import { getDashboardData } from "../services/dashboardService";
+     |                                    ^
+  21 |  function Dashboard() {
+  22 |    _s();
+      at TransformPluginContext._formatLog (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47835:41)
+      at TransformPluginContext.error (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47832:16)
+      at normalizeUrl (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:45968:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:46087:37
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:46014:7)
+      at async EnvironmentPluginContainer.transform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47630:18)
+      at async loadAndTransform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:41318:27)
+      at async viteTransformMiddleware (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:42781:24)
+10:20:19 AM [vite] (client) ✨ new dependencies optimized: recharts
+10:20:19 AM [vite] (client) ✨ optimized dependencies changed. reloading
+10:20:20 AM [vite] (client) Pre-transform error: Failed to resolve import "../services/dashboardService" from "src/pages/Login.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/djdalg/gestao-ponto-github/gestaoponto/frontend/src/pages/Login.jsx:3:33
+  18 |  import React, { useState, useEffect } from "react";
+  19 |  import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+  20 |  import { getDashboardData } from "../services/dashboardService";
+     |                                    ^
+  21 |  function Dashboard() {
+  22 |    _s();
+10:20:20 AM [vite] Internal server error: Failed to resolve import "../services/dashboardService" from "src/pages/Login.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/djdalg/gestao-ponto-github/gestaoponto/frontend/src/pages/Login.jsx:3:33
+  18 |  import React, { useState, useEffect } from "react";
+  19 |  import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+  20 |  import { getDashboardData } from "../services/dashboardService";
+     |                                    ^
+  21 |  function Dashboard() {
+  22 |    _s();
+      at TransformPluginContext._formatLog (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47835:41)
+      at TransformPluginContext.error (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47832:16)
+      at normalizeUrl (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:45968:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:46087:37
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:46014:7)
+      at async EnvironmentPluginContainer.transform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47630:18)
+      at async loadAndTransform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:41318:27)
+      at async viteTransformMiddleware (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:42781:24)
+10:20:44 AM [vite] (client) hmr update /src/App.jsx
+10:20:44 AM [vite] (client) Pre-transform error: Failed to resolve import "../services/dashboardService" from "src/pages/Login.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/djdalg/gestao-ponto-github/gestaoponto/frontend/src/pages/Login.jsx:3:33
+  18 |  import React, { useState, useEffect } from "react";
+  19 |  import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+  20 |  import { getDashboardData } from "../services/dashboardService";
+     |                                    ^
+  21 |  function Dashboard() {
+  22 |    _s();
+10:20:44 AM [vite] Internal server error: Failed to resolve import "../services/dashboardService" from "src/pages/Login.jsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /home/djdalg/gestao-ponto-github/gestaoponto/frontend/src/pages/Login.jsx:3:33
+  18 |  import React, { useState, useEffect } from "react";
+  19 |  import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+  20 |  import { getDashboardData } from "../services/dashboardService";
+     |                                    ^
+  21 |  function Dashboard() {
+  22 |    _s();
+      at TransformPluginContext._formatLog (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47835:41)
+      at TransformPluginContext.error (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47832:16)
+      at normalizeUrl (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:45968:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:46087:37
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:46014:7)
+      at async EnvironmentPluginContainer.transform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:47630:18)
+      at async loadAndTransform (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:41318:27)
+      at async viteTransformMiddleware (file:///home/djdalg/gestao-ponto-github/gestaoponto/frontend/node_modules/vite/dist/node/chunks/dep-ByPKlqZ5.js:42781:24)
+10:20:52 AM [vite] (client) hmr update /src/App.jsx
+10:20:56 AM [vite] (client) hmr update /src/pages/Login.jsx
+10:21:15 AM [vite] (client) hmr update /src/pages/Registro.jsx
+10:22:03 AM [vite] (client) hmr update /src/pages/Dashboard.jsx, /src/pages/Registro.jsx
+10:22:12 AM [vite] (client) hmr update /src/pages/Correcao.jsx
+10:22:21 AM [vite] (client) hmr update /src/pages/Correcao.jsx
+10:22:32 AM [vite] (client) hmr update /src/App.jsx
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+
+  VITE v6.2.0  ready in 179 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+10:26:26 AM [vite] (client) hmr update /src/pages/Dashboard.jsx, /src/pages/Registro.jsx
+10:26:26 AM [vite] (client) hmr update /src/pages/Dashboard.jsx, /src/pages/Registro.jsx
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+
+  VITE v6.2.0  ready in 187 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose

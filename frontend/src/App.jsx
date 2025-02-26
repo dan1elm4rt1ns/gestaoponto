@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Registro from './pages/Registro';
 import Correcao from './pages/Correcao';
 
 function App() {
-  // Exemplo simples de proteção de rota (pode ser melhorado com contexto ou Redux)
   const isAuthenticated = localStorage.getItem('token') ? true : false;
 
   return (
@@ -26,7 +24,6 @@ function App() {
           path="/correcao"
           element={isAuthenticated ? <Correcao /> : <Navigate to="/login" />}
         />
-        {/* Rota default */}
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </Router>

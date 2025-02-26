@@ -1,10 +1,18 @@
-import API from './api';
+import axios from 'axios';
 
-export const corrigirPontos = async (userIds, startDate, endDate, padrao) => {
+export async function corrigirPontos(userIds, startDate, endDate, padrao) {
   try {
-    const response = await API.put('/correcao', { userIds, startDate, endDate, padrao });
+    const response = await axios.put(
+      'http://localhost:3000/correcao',
+      { userIds, startDate, endDate, padrao },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+      }
+    );
     return response.data;
   } catch (error) {
     throw error;
   }
-};
+}
