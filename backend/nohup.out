@@ -1,0 +1,12 @@
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+
+> backend@1.0.0 start
+> node server.js
+
+Servidor rodando em http://localhost:3000
+Tabelas verificadas/criadas com sucesso!
+Usuário administrador já existe.

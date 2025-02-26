@@ -1,0 +1,52 @@
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+
+  VITE v6.2.0  ready in 210 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+6:29:35 PM [vite] (client) hmr update /src/App.jsx
+6:29:35 PM [vite] (client) ✨ new dependencies optimized: react-router-dom
+6:29:35 PM [vite] (client) ✨ optimized dependencies changed. reloading
+6:37:04 PM [vite] (client) hmr update /src/pages/Login.jsx
+6:37:04 PM [vite] (client) hmr update /src/pages/Dashboard.jsx
+6:37:04 PM [vite] (client) hmr update /src/pages/Registro.jsx
+6:37:04 PM [vite] (client) hmr update /src/pages/Correcao.jsx
+6:37:04 PM [vite] (client) hmr update /src/App.jsx
+6:37:05 PM [vite] (client) ✨ new dependencies optimized: axios
+6:37:05 PM [vite] (client) ✨ optimized dependencies changed. reloading
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+
+  VITE v6.2.0  ready in 767 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+8:31:57 AM [vite] vite.config.js changed, restarting server...
+8:31:57 AM [vite] (client) page reload index.html
+8:31:57 AM [vite] (client) hmr update /src/App.jsx
+8:31:57 AM [vite] (client) hmr update /src/index.css
+8:31:57 AM [vite] (client) page reload src/main.jsx
+8:31:57 AM [vite] (client) hmr update /src/pages/Correcao.jsx
+8:31:57 AM [vite] (client) hmr update /src/pages/Dashboard.jsx
+8:31:57 AM [vite] (client) hmr update /src/pages/Login.jsx
+8:31:57 AM [vite] (client) hmr update /src/pages/Registro.jsx
+8:31:57 AM [vite] (client) page reload src/services/api.js
+8:31:57 AM [vite] (client) page reload src/services/authService.js
+8:31:57 AM [vite] (client) page reload src/services/correcaoService.js
+8:31:57 AM [vite] (client) page reload src/services/pontoService.js
+8:31:57 AM [vite] server restarted.
+
+> gestao-ponto-frontend@0.0.0 dev
+> vite
+
+8:36:58 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+
+  VITE v6.2.0  ready in 260 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
