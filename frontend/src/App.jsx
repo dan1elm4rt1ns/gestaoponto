@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
@@ -5,8 +6,10 @@ import Dashboard from './pages/Dashboard';
 import Registro from './pages/Registro';
 import Correcao from './pages/Correcao';
 
+localStorage.clear();
+
 function App() {
-  const isAuthenticated = localStorage.getItem('token') ? true : false;
+  const isAuthenticated = !!localStorage.getItem('token');
 
   return (
     <Router>
